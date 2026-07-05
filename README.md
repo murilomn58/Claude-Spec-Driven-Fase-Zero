@@ -76,12 +76,32 @@ aprovação humana**:
 | 4 · `qa` | Testes verdes + a tela aberta no navegador como prova |
 | 5 · `guardrails-pr` | Hook barra segredos no commit e abre o PR · **🚧 gate: você revisa o merge** |
 
-E a cada feature entregue, o protocolo redesenha um **mapa vivo da arquitetura**
-(`/adp-map`) — o diagrama que não morre no Miro.
+## O diagrama que não morre no Miro
 
-Efeito colateral: como as skills carregam o raciocínio, dá pra rodar Sonnet em
-esforço médio no lugar de Opus em esforço alto com resultado comparável — nas
-minhas estimativas, **até 70% menos tokens por feature** (cenário estimado).
+A cada feature que entra no `main`, o protocolo **redesenha um mapa vivo da
+arquitetura** (`/adp-map`) — um HTML interativo que mora no próprio repo:
+
+<div align="center">
+<img src="assets/adp-mapa-vivo.png" width="820" alt="Mapa vivo da arquitetura gerado pelo /adp-map: canvas interativo com skills, gates humanos, subagentes, MCPs e hooks" />
+</div>
+
+Cada nó é uma peça real do projeto: arquivos, telas, skills, subagentes, MCPs,
+hooks. Clica no nó e vê os arquivos responsáveis por ela; arrasta pra mover,
+scroll pra dar zoom. O diagrama de arquitetura que todo time desenha uma vez e
+abandona no Miro — aqui ele **se atualiza sozinho a cada entrega**, porque
+redesenhá-lo é uma fase do protocolo, não uma boa intenção.
+
+## A conta dos tokens
+
+Efeito colateral que virou argumento: como as skills carregam o raciocínio (o
+método está escrito nelas, não improvisado a cada prompt), dá pra rodar
+**Sonnet em esforço médio** no lugar de **Opus em esforço alto** com resultado
+comparável na maioria das features.
+
+Nas minhas estimativas, **até 70% menos tokens por feature** (cenário estimado
+comparando Sonnet médio vs Opus alto no meu próprio uso — não é benchmark
+formal). Menos retrabalho também conta: feature especificada antes de codificar
+não precisa ser refeita.
 
 **→ [Protocolo Completo em claudespecdriven.com.br](https://claudespecdriven.com.br)** — R$47 no lançamento, 7 dias de garantia.
 
