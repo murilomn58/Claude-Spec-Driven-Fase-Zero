@@ -30,7 +30,7 @@ Duas skills + um arquivo de convenções, direto no seu Claude Code:
 
 | | Skill | O que faz |
 |---|---|---|
-| **Fase 0** | `grill-me` | Inverte a entrevista: a IA te pergunta — uma pergunta por vez, sem aceitar resposta vaga — até escopo e critérios de sucesso ficarem claros. |
+| **Fase 0** | `grill-me` | Inverte a entrevista: a IA levanta o estado da arte online (GitHub, HN, Reddit, dev.to, Product Hunt, TabNews), te pergunta uma pergunta por vez sem aceitar resposta vaga, e funde os achados com o teu escopo até ele ficar redondo. |
 | **Fase 1** | `to-prd` | A conversa vira um PRD de verdade: user stories, critérios de aceitação e os seams do sistema. |
 | — | `CLAUDE.coringa.md` | Índice + convenções pra adaptar o método ao seu projeto e stack. |
 
