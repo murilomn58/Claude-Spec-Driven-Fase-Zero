@@ -9,7 +9,7 @@
     {
       "name": "adp-fase-zero",
       "description": "Fase Zero do ADP (gratis): grill-me + to-prd + CLAUDE.coringa.md — a IA te entrevista ate o escopo ficar redondo e transforma a conversa num PRD de verdade, antes de qualquer linha de codigo.",
-      "version": "0.2.0",
+      "version": "0.3.0",
       "source": "./",
       "author": {
         "name": "Murilo Miguel Narciso"

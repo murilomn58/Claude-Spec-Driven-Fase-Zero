@@ -1,7 +1,7 @@
 ---
 name: grill-me
 description: 'Use no inicio de uma feature ou mudanca de escopo incerto para DESCOBRIR e AFIAR os requisitos antes de escrever qualquer codigo (Fase 0 do Agent-Driven Protocol). Entrevista implacavel que desafia cada suposicao, abre opcoes de abordagem (via web-buscador) e explora o codebase, ate escopo e criterios de sucesso ficarem claros. Casos-gatilho: "quero adicionar/construir X", "nao sei bem o que preciso", "vamos comecar essa feature", "levanta os requisitos", "grill", "descobrir o escopo", "isso ainda ta vago". Nao use em mudanca pequena, direta e ja compreendida (va de plan mode). Termina num brief afiado que alimenta o to-prd.'
-version: 0.1.0
+version: 0.2.0
 ---
 
 # grill-me
@@ -27,7 +27,7 @@ A diferenca do brainstorming puro esta na postura. Aqui:
 ## O loop do grill
 1. **Explorar o terreno primeiro (via subagente, caminho absoluto).** Antes de perguntar, despache UM subagente pra mapear o codebase do ALVO: `feature-dev:code-explorer` quando o projeto tem estrutura de app; fallback para um Explore com Glob/Read quando nao se aplica (ex: site estatico vanilla). NUNCA explore inline com ls/find no thread principal, e nunca repita um comando que falhou. No mesmo passo, cheque **reuso interno**: memoria da sessao, CLAUDE.md dos projetos e Glob bounded em `C:\dev\*` — muita "feature nova" ja existe como modulo pronto (ex: um modulo de pagamento seu, pronto em outro repo). Cite arquivos.
 2. **Grelhar.** Perguntas dirigidas, uma por vez: problema real, quem usa, criterios de sucesso, casos de borda, restricoes (stack, prazo, dado sensivel, LGPD). Registre as respostas.
-3. **Abrir opcoes (a criatividade entra aqui).** Antes de fixar o caminho, chame a skill `web-buscador` no modo criativo (ela vem no ADP Protocolo Completo; sem ela, pesquise na web e nas docs normalmente): 2-4 abordagens (stacks, libs, MCPs, plugins, padroes atuais) com trade-offs. Ela ja cruza com o que voce ja tem (skills, MCPs) e traz o que ha de novo. Nao fixe o caminho sem ter aberto as opcoes.
+3. **Abrir opcoes (a criatividade entra aqui).** Antes de fixar o caminho, chame a skill `web-buscador` no modo criativo (ela vem no ADP Protocolo Completo; sem ela, pesquise na web e nas docs normalmente): 2-4 abordagens (stacks, libs, MCPs, plugins, padroes atuais) com trade-offs, **mais o radar de comunidades** (playbook proprio da web-buscador): top 3 achados em Reddit, dev.to, Product Hunt e TabNews sobre a area da feature pedida E a area do projeto — dores relatadas, padroes que a comunidade adotou e concorrentes ja lancados entram como input do brainstorm antes do gate. Ela ja cruza com o que voce ja tem (skills, MCPs) e traz o que ha de novo. Nao fixe o caminho sem ter aberto as opcoes.
 4. **Afiar o dominio.** Conforme as decisoes cristalizam, registre os termos-chave (glossario leve) e as decisoes importantes com o porque (ADR embrionaria). Isso vira materia-prima do PRD e evita re-discussao. (inspirado no domain-modeling do Matt)
 5. **Convergir.** Proponha a abordagem recomendada com a justificativa + as alternativas como plano B.
 
@@ -41,6 +41,7 @@ Entregue um brief estruturado (nao codigo), que e o input do `to-prd`:
 - **Abordagem escolhida** (+ alternativas descartadas e por que).
 - **Decisoes e termos** (glossario leve + decisoes com o porque).
 - **Restricoes** (stack, prazo, seguranca/LGPD).
+- **Radar de comunidades** (os achados de Reddit/dev.to/Product Hunt/TabNews que mudaram o brainstorm: dor confirmada, padrao adotado, concorrente existente — so os que influenciaram decisao).
 - **Riscos e perguntas em aberto** (o que a `web-buscador` marcou como "nao consta").
 - **Fora de escopo** (a fronteira explicita).
 
