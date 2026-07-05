@@ -1,0 +1,20 @@
+{
+  "name": "adp-fase-zero",
+  "version": "0.2.0",
+  "description": "Fase Zero do Agent-Driven Protocol (ADP): as 2 primeiras fases do metodo spec-driven para Claude Code. grill-me (a IA te entrevista ate o escopo ficar redondo) + to-prd (a conversa vira um PRD de verdade) + CLAUDE.coringa.md (convencoes para adaptar ao seu projeto). Gratis. O protocolo completo (6 fases, 4 gates humanos, mapa vivo, hook de segredos) esta em claudespecdriven.com.br.",
+  "author": {
+    "name": "Murilo Miguel Narciso",
+    "email": "murilomn58@gmail.com"
+  },
+  "homepage": "https://claudespecdriven.com.br",
+  "license": "MIT",
+  "keywords": [
+    "spec-driven",
+    "claude-code",
+    "prd",
+    "requirements",
+    "interview",
+    "workflow",
+    "adp"
+  ]
+}
